@@ -1,0 +1,54 @@
+.LeftBar {
+    background-color: white;
+    position: sticky;
+    top: 52px;
+    overflow: scroll;
+    flex: 2;
+    margin-top: 60px;
+
+    height: calc(100vh - 72px);
+
+    .container {
+        padding: 20px;
+
+        hr {
+            color: rgb(218, 213, 213);
+        }
+
+        .menu {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            margin: 5px 0;
+
+            .user {
+                i {
+                    font-size: 20px;
+                }
+                span {
+                    font-size: 15px;
+                    margin-left: 8px;
+                }
+            }
+
+            .item {
+                display: flex;
+
+                img {
+                    width: 20px;
+                }
+                span {
+                    font-size: 15px;
+                    margin-left: 8px;
+                    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                }
+            }
+        }
+    }
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}

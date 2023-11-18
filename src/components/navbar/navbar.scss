@@ -1,0 +1,71 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
+@import "../../style.scss";
+.navbar{
+
+    width: 100%;
+    height: 40px;
+    border: 0.5px solid rgba(128, 128, 128, 0.404);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    position:fixed;
+    top: 0;
+    background-color: white;
+    .left{
+        display: flex;
+        justify-content: space-evenly;
+        width: 40%;
+        h3{
+            color:rgb(77, 0, 128);
+            font-family: 'gilroy';
+        }
+       
+        i{
+            font-size: 20px;
+            cursor: pointer;
+            margin-left: 5px;
+        }
+        .search{
+           
+            display: flex;
+            border: 0.5px solid grey;
+            width: 50%;
+            margin-left: 5px;
+            input{
+                width:100%;
+                border: none;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+        }
+    }
+    .right{
+        display: flex;
+        justify-content: space-evenly;
+        width: 25%;
+        i{
+            font-size: 20px;
+            cursor: pointer;
+            
+            margin-right: 5px;
+        }
+        p{
+            margin-right: 5px;
+        }
+        .user{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            img{
+                width: 30px;
+                height: 30px;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+            
+        }
+
+    }
+    
+}

@@ -1,0 +1,117 @@
+.register{
+    height: 100vh;
+    background-color: rgb(193,190,255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .registercard{
+           width:600px;
+           height: 60vh;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           background-color: whitesmoke;
+           overflow: hidden;
+           border-radius:10px;
+        .registerright{
+            height: 100%;
+            width: 50%;
+            background: linear-gradient(rgba(128, 128, 128, 0.5),black),url(https://images.unsplash.com/photo-1510972527921-ce03766a1cf1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c29jaWFsfGVufDB8fDB8fHww) center;
+            background-size: cover;
+            overflow: hidden;
+            color: rgb(223, 221, 221);
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 50px;
+            
+
+           
+            h1{
+               font-family: "gilroy";
+               text-shadow: 0px 20px 20px grey;
+          
+               font-weight: 100;
+               font-size: 40px;
+            }
+            p{
+                font-size: 14px;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-weight: 900;
+            }
+            span{
+                font-size: 14px;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-weight: 900;
+            }
+            button{
+                height: 40px;
+                width: 100px;
+                border: none;
+                font-family: 'gilroy';
+                font-size: larger;
+                font-weight:300;
+                background-color:grey ;
+                color: rgb(223, 221, 221);
+            }
+        }
+        .registerleft{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 10px;
+            height: 100%;
+            width: 50%;
+            padding: 50px;
+           
+            h1{
+                font-family: "gilroy";
+                color: gray;
+           
+                font-weight: 100;
+                font-size: 40px;
+            }
+            form{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+                height: 50%;
+               
+                input{
+                    border:2px solid gray;
+                    border-radius: 10px;
+                    // background-color: transparent;
+                    height:30px ;
+                    text-align: center;
+                    text-decoration: underline;
+                    text-transform: uppercase;
+                    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                    background-color: transparent;
+                    font-size: 16px;
+                    &:hover{
+                        background-color:rgb(223, 221, 221) ;
+                    }
+                    &:active{
+                        border: none ;
+                    }
+                }
+                button{
+                    height: 40px;
+                    width: 100px;
+                    border: none;
+                    font-family: 'gilroy';
+                    font-size: larger;
+                    font-weight:300;
+                    background-color: rgb(223, 221, 221);
+                    color: grey;
+
+                }
+            }
+        }
+        
+    }
+}

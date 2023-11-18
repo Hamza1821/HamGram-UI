@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: lightgray
+}
+
+.rightbar{
+ 
+    position: sticky;
+    top: 52px;
+    overflow: scroll;
+    flex: 3;
+    margin-top: 60px;
+  
+
+    height: calc(100vh - 72px);
+
+    .container{
+        padding:0px;
+      ;
+        .item{
+            background-color: white;
+
+
+            box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.09);
+-webkit-box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.09);
+-moz-box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.09);
+padding: 10px;
+margin-bottom: 10px;
+            span{
+                color: gray;
+            }
+            .user{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin: 10px 0;
+                .userInfo{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 10px;
+                    position: relative;
+                    img{
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+                    .online{
+                        width: 12px;
+                        height: 12px;
+                        background-color: limegreen;
+                        border-radius: 50%;
+                        position: absolute;
+                        top:0;
+                        left: 25px;
+                   }
+                    span{
+                        font-weight: 900;
+                        font-size:15px;
+                        color: black;
+                      
+                    }
+                  
+                    p{
+                        font-size: 15px;
+                       color: grey;
+                        font-weight: 200;
+                       
+                    }
+                }
+                .buttons{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 10px;
+                    button{
+                        border: none;
+                        padding: 5px;
+                        cursor: pointer;
+                        color: white;
+                      
+                    }
+                    .follow{
+                        background-color: blue;
+                    }
+                    .dismiss{
+                        background-color: red;
+                    }
+                }
+            }
+        }
+    }
+
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
