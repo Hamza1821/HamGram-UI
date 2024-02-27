@@ -8,7 +8,7 @@ const LeftBar = () => {
         <div className="menu">
            <div className="user">
         <i class="bi bi-person-circle"></i>
-        <span>Hamza Mubin</span>
+        <span className='username'>Hamza Mubin</span>
            </div>
            <div className="item">
             <img src="/assets/friend.png" alt="hello" />

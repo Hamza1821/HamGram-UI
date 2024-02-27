@@ -1,0 +1,88 @@
+.userC{
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    
+    
+    .userCInfo{
+        display: flex;
+        justify-content:flex-start;
+        align-items:flex-start;
+        gap: 15px;
+     
+        img{
+            width: 30px;
+            height: 30px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        span{
+            font-size: smaller;
+            
+            color: rgb(37, 37, 37);
+        }
+        h5{
+            color: gray;
+            font-size: x-small
+        }
+        
+    
+        
+        
+    }
+}
+.comment{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 15px;
+    padding: 5px;
+    
+
+   span{
+    font-size: small;
+    width: 90%;
+   }
+}
+
+.write{
+    display: flex;
+    gap: 5px;
+    
+    img{
+        height: 40px;
+        width: 40px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+    input{
+        width: 80%;
+        border: none;
+        height: 30px;
+        color: gray;
+        padding: 3px;
+        border-bottom: 2px solid blue;
+        :active{
+            border: none;
+        }
+    }
+    button{
+        width: 70px;
+        height: 35px;
+        text-align: center;
+        color: white;
+        background-color: blue;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        
+       button:active{
+            transform:scale(0.9);
+            
+        }
+    }
+    
+
+}

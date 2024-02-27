@@ -12,6 +12,7 @@
     position:fixed;
     top: 0;
     background-color: white;
+    z-index: 999;
     .left{
         display: flex;
         justify-content: space-evenly;
@@ -68,4 +69,35 @@
 
     }
     
+}
+
+@media (max-width:480px) {
+    
+   
+      .right{
+
+        i,p,.user{
+            img,span{
+                display: none;
+            }
+            display: none;
+        }
+      }
+      .navbar{
+        justify-content: center;
+        .left{
+            justify-content:flex-end;
+            width: 100%;
+            gap: 30px;
+            input{
+                display: none;
+              }
+        }
+        
+    }
+    
+
+
+
+
 }

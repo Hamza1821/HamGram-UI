@@ -60,7 +60,7 @@ margin-bottom: 10px;
                    }
                     span{
                         font-weight: 900;
-                        font-size:15px;
+                        font-size: 8px;
                         color: black;
                       
                     }
@@ -99,6 +99,14 @@ margin-bottom: 10px;
     scrollbar-color: transparent transparent;
 
     &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+
+
+@media (max-width:480px){
+    .rightbar{
         display: none;
     }
 }

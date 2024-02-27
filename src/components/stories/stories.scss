@@ -2,14 +2,16 @@
     display: flex;
     gap: 10px;
     height: 250px;
+
     margin-top: 60px;
     margin-bottom: 30px;
-  padding: 5px;
+  padding: 5px 20px;
+  overflow: scroll;
 
    
 
     .story{
-        flex: 1;
+        width: 150px;
         border-radius: 10px;
         overflow: hidden;
         position:relative;
@@ -42,4 +44,26 @@
             text-align: center;
         }
     }
+}
+@media (max-width:480px){
+   .stories{
+      height: 70px;
+      margin-bottom: 0;
+      padding: 0;
+    .story{
+        height: 60px;
+        width: 60px;
+        border-radius: 50px;
+        span{
+            display: none;
+        }
+        button{
+            top: 0;
+            bottom: 0;
+            margin: auto;
+           
+            
+        }
+    }
+   }
 }

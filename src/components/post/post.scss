@@ -1,0 +1,71 @@
+.post{
+   
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 0 30px;
+    background-color: white;
+    border-radius: 10px;
+    
+    -webkit-box-shadow: 6px 7px 23px -11px rgba(0,0,0,0.75);
+-moz-box-shadow: 6px 7px 23px -11px rgba(0,0,0,0.75);
+box-shadow: 6px 7px 23px -11px rgba(0,0,0,0.75);
+}
+.user{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .userInfo{
+        display: flex;
+        justify-content:flex-start;
+        align-items:flex-start;
+        gap: 15px;
+        img{
+            width: 30px;
+            border-radius: 50%;
+        }
+        span{
+            font-size: smaller;
+            
+            color: rgb(37, 37, 37);
+        }
+        h5{
+            color: gray;
+            font-size: x-small
+        }
+    
+        
+        
+    }
+}
+.content{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    img{
+        max-height: 500px;
+        object-fit: cover;
+    }
+
+}
+.itr{
+    display: flex;
+    align-items: center;
+   gap: 5px;
+   font-size: smaller;
+}
+.itrIcons{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+@media (max-width:480px){
+.post{
+    margin: 5px;
+    padding: 5px;
+    
+}
+}
