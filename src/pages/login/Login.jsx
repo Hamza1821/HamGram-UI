@@ -25,7 +25,7 @@ const Login = () => {
         <form>
           <input type="text" placeholder='Username' />
           <input type="password" placeholder='Password' />
-          <button onClick={handleLogin}>login</button>
+          <button onClick={handleLogin()}>login</button>
         </form>
       </div>
      </div>
