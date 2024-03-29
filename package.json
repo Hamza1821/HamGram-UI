@@ -1,7 +1,9 @@
 {
   "name": "social-front",
+  "proxy": "http://localhost/8080",
   "private": true,
   "version": "0.0.0",
+  "port": "1821",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -14,7 +16,12 @@
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.15.11",
     "@mui/material": "^5.15.11",
+    "@tanstack/react-query": "^5.24.1",
+    "axios": "^1.6.7",
     "bootstrap-icons": "^1.11.1",
+    "loadash": "^1.0.0",
+    "lodash": "^4.17.21",
+    "moment": "^2.30.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.18.0"

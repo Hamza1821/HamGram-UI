@@ -2,8 +2,21 @@
     height: 100vh;
     background-color: rgb(193,190,255);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 30px;
+
+    .h{
+        font-size:5vw;
+        color:rgba(71, 68, 68, 0.973) ;
+        text-shadow:
+    1px 1px 1px rgba(255, 255, 255, 0.39),
+    4px 4px 5px rgba(0, 0, 0, 0.8),
+    -1px -1px 0px rgba(255, 255, 255, 0.5); 
+    }
+
+
     .registercard{
            width:600px;
            height: 60vh;
@@ -13,6 +26,7 @@
            background-color: whitesmoke;
            overflow: hidden;
            border-radius:10px;
+           
         .registerright{
             height: 100%;
             width: 50%;
@@ -35,6 +49,10 @@
           
                font-weight: 100;
                font-size: 40px;
+               text-shadow:
+    1px 1px 1px rgba(0, 0, 0, 0.3),
+    4px 4px 5px rgba(0, 0, 0, 0.8),
+    -1px -1px 0px rgba(255, 255, 255, 0.5); 
             }
             p{
                 font-size: 14px;
@@ -55,6 +73,10 @@
                 font-weight:300;
                 background-color:grey ;
                 color: rgb(223, 221, 221);
+                text-shadow:
+    1px 1px 1px rgba(0, 0, 0, 0.3),
+    4px 4px 5px rgba(0, 0, 0, 0.8),
+    -1px -1px 0px rgba(255, 255, 255, 0.5); 
             }
         }
         .registerleft{
@@ -70,7 +92,10 @@
             h1{
                 font-family: "gilroy";
                 color: gray;
-           
+                text-shadow:
+                1px 1px 1px rgba(0, 0, 0, 0.3),
+                4px 4px 5px rgba(0, 0, 0, 0.8),
+                -1px -1px 0px rgba(255, 255, 255, 0.5); 
                 font-weight: 100;
                 font-size: 40px;
             }
@@ -100,6 +125,10 @@
                     }
                 }
                 button{
+                    text-shadow:
+    1px 1px 1px rgba(0, 0, 0, 0.3),
+    4px 4px 5px rgba(0, 0, 0, 0.8),
+    -1px -1px 0px rgba(255, 255, 255, 0.5); 
                     height: 40px;
                     width: 100px;
                     border: none;

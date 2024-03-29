@@ -1,58 +1,70 @@
-import React, { useState, useContext } from "react";
+import { useState, useContext } from "react";
 import "./comments.scss";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
+import {useQuery} from '@tanstack/react-query'
+import { makeRequest } from '../../axios'
+import moment from'moment'
+import {useMutation, useQueryClient} from '@tanstack/react-query'
 
-const Comments = () => {
+
+
+
+const Comments = ({postId}) => {
   const { currentUser } = useContext(AuthContext);
-  const [comments, setComments] = useState([
-    {
-      id: 1,
-      name: "Hamza Mubin",
-      userCId: 1,
-      profilePic:
-        "https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg",
-      desc: "lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab minus deserunt at.",
-      img:
-        "https://wallpapers.com/images/high/obito-uchiha-six-paths-doiun9ayak5htw1e.webp"
-    },
-    {
-      id: 2,
-      name: "jane doe",
-      userCId: 2,
-      profilePic:
-        "https://wallpapers.com/images/hd/cool-profile-picture-87h46gcobjl5e4xu.jpg",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab minus deserunt at."
-    }
-  ]);
+  
   const [newComment, setNewComment] = useState("");
+
+   const { isLoading, error, data } = useQuery({
+    queryKey: ['comments'],
+    queryFn: () => makeRequest.get('/comments?postId='+postId).then(res => res.data),
+  });
+
 
   const handleCommentChange = (e) => {
     setNewComment(e.target.value);
   };
+  const queryClient =useQueryClient("")
 
-  const addComment = () => {
-    if (!newComment.trim()) {
-      // If the comment is empty or only contains whitespace, return
-      return;
+  const mutation = useMutation( {
+    mutationFn:async (comment) => {
+      
+      const response = await makeRequest.post('/comments?postId='+postId,comment); // Send POST request with FormData
+      return response.data; // Return response data (assuming successful response)
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries(['comments']); // Invalidate 'posts' cache
+    },
+    onError: (error) => {
+      console.error('Error creating post:', error); // Handle errors here
+    },
+  });
+
+  const addComment = async(e) => {
+    if(newComment==""){
+      console.log("write something")
+      return
     }
+    e.preventDefault();
 
-    let random = Math.floor(Math.random() * 100);
-    const commentNew = {
-      id: random,
-      name: `${currentUser.name}`,
-      userCId: random,
-      profilePic: `${currentUser.img}`,
-      desc: newComment
-    };
-    setComments([commentNew, ...comments]);
-    setNewComment(""); // Clear the input field after adding the comment
+    try {
+      
+
+
+      await mutation.mutate({ newComment,postId});
+      setNewComment("");
+     
+
+    } catch (error) {
+      console.error('Error creating comment:', error); // Handle errors in catch block
+    }
+   
   };
 
   return (
     <div className="comments">
       <div className="write">
-        <img src={currentUser.img} alt="" />
+        <img src={currentUser.profilePic} alt="" />
         <input
           type="text"
           id="comment"
@@ -62,26 +74,26 @@ const Comments = () => {
         />
         <button onClick={addComment}>add</button>
       </div>
-      {comments.map((comment) => (
+      {error? "something went wrong" :(isLoading? "loading" :data.map((comment) => (
         <div className="comment" key={comment.id}>
           <div className="userC">
             <div className="userCInfo">
               <img src={comment.profilePic} alt="" />
               <div className="details">
                 <Link
-                  to={`/profile/${comment.userCId}`}
+                  to={`/profile/${comment.userId}`}
                   style={{ textDecoration: "none", color: "inherit" }}
                 >
                   <span>{comment.name}</span>
                 </Link>
-                <h5>1 min ago</h5>
+                <h5>{moment(comment.createdAt).fromNow()}</h5>
               </div>
             </div>
 
             <span>{comment.desc}</span>
           </div>
         </div>
-      ))}
+      )))}
     </div>
   );
 };

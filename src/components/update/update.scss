@@ -1,0 +1,173 @@
+// .update{
+//     position:absolute;
+//     top: 10%;
+//     left: 0;
+//     bottom: 0;
+//     right: 0;
+//     margin: auto;
+//     width: 40%;
+//     height: 50%;
+//     background-color: white;
+//     padding: 50px;
+//     z-index: 999;
+//     border: 2px solid black;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: flex-start;
+//     .selectedImage{
+//         height: 100px;
+//         width: 100px;
+//         border-radius:0;
+//         object-fit: cover;
+//     }
+//     .closeBtn{
+//         background-color: red;
+//         color: white;
+//         height: 30px;
+//         width: 30px;
+//     }
+//     .form{
+//         border: 2px solid black;
+//         width: 100%;
+//         height: 90%;
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         flex-direction: column;
+//     }
+// }
+.update {
+    position: fixed;
+    top: 55%;
+    left: 50%;
+    width: 40%;
+   
+    transform: translate(-50%, -50%);
+    background-color: #f7f7f7;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  
+    &.active {
+      top: 0;
+      transform: translate(-50%, 0);
+      transition: top 0.3s ease;
+    }
+    .selectedImage{
+                 height: 100px;
+                 width: 100px;
+                 border-radius:0;
+                 object-fit: cover;
+          }
+  
+    .form {
+      display: flex;
+      flex-direction: column;
+  
+      .pics {
+        display: flex;
+        flex-direction: column;
+        
+        width: 50%;
+  
+        .cover,
+        .profile {
+          position: relative;
+          width:50% ;
+        
+          input[type='file'] {
+            display: none;
+          }
+  
+          label {
+            display: block;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+           
+            border-radius: 13px;
+            padding: 5px;
+            background-color: #fff;
+            transition: background-color 0.3s ease;
+            height: 30px;
+  
+            span {
+              font-size: 13px;
+              color: #555;
+              height: 10px;
+              text-align: center;
+            }
+  
+            
+          }
+        }
+      }
+  
+      .fitem {
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+  
+        label {
+          font-size: 13px;
+          color: #333;
+          
+        }
+  
+        input[type='text'] {
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 10px;
+          width: 50%;
+          margin-top: 5px;
+          font-size: 13px;
+          transition: border-color 0.3s ease;
+  
+          &:focus {
+            border-color: #007bff;
+            outline: none;
+          }
+        }
+  
+        input[type='file'] {
+          width: 50%;
+          
+        }
+  
+        button {
+          align-self: flex-start;
+          padding: 10px 20px;
+          background-color: #007bff;
+          color: #fff;
+          border: none;
+          border-radius: 10px;
+          cursor: pointer;
+          font-size: 16px;
+          transition: background-color 0.3s ease;
+  
+          &:hover {
+            background-color: #0056b3;
+          }
+        }
+      }
+    }
+  
+    .closeBtn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 24px;
+      color: #333;
+      transition: color 0.3s ease;
+  
+      &:hover {
+        color: #ff0000;
+      }
+    }
+  }
+  

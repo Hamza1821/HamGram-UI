@@ -1,71 +1,91 @@
 .post{
    
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    margin: 0 30px;
-    background-color: white;
-    border-radius: 10px;
-    
-    -webkit-box-shadow: 6px 7px 23px -11px rgba(0,0,0,0.75);
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin: 0 30px;
+  background-color: white;
+  border-radius: 10px;
+  
+  -webkit-box-shadow: 6px 7px 23px -11px rgba(0,0,0,0.75);
 -moz-box-shadow: 6px 7px 23px -11px rgba(0,0,0,0.75);
 box-shadow: 6px 7px 23px -11px rgba(0,0,0,0.75);
 }
 .user{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    .userInfo{
-        display: flex;
-        justify-content:flex-start;
-        align-items:flex-start;
-        gap: 15px;
-        img{
-            width: 30px;
-            border-radius: 50%;
-        }
-        span{
-            font-size: smaller;
-            
-            color: rgb(37, 37, 37);
-        }
-        h5{
-            color: gray;
-            font-size: x-small
-        }
-    
-        
-        
-    }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .userInfo{
+      display: flex;
+      justify-content:flex-start;
+      align-items:flex-start;
+      gap: 15px;
+      img{
+          width: 30px;
+          height: 30px;
+          object-fit: cover;
+          border-radius: 50%;
+      }
+      span{
+          font-size: smaller;
+          
+          color: rgb(37, 37, 37);
+      }
+      h5{
+          color: gray;
+          font-size: x-small
+      }
+  
+      
+      
+  }
 }
 .content{
-    margin: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    img{
-        max-height: 500px;
-        object-fit: cover;
-    }
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  img{
+      max-height: 500px;
+      object-fit: cover;
+  }
 
 }
+.menus{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu{
+  cursor: pointer;
+}
+.deleteBtn{
+  background-color: red;
+  width: 60px;
+  height: 30px;
+  cursor: pointer;
+  border: none;
+  color: white;
+}
 .itr{
-    display: flex;
-    align-items: center;
-   gap: 5px;
-   font-size: smaller;
+  display: flex;
+  align-items: center;
+ gap: 5px;
+ font-size: smaller;
 }
 .itrIcons{
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 2px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 2px;
 }
 
 @media (max-width:480px){
 .post{
-    margin: 5px;
-    padding: 5px;
-    
+  margin: 5px;
+  padding: 5px;
+  
 }
 }

@@ -1,10 +1,11 @@
-import React, { useContext } from 'react'
+import  { useContext } from 'react'
 import './stories.scss'
 import { AuthContext } from '../../context/AuthContext'
 
 const Stories = () => {
    const {currentUser}= useContext(AuthContext)
-   
+  
+   const defaultProfile = 'https://i.pinimg.com/236x/90/de/25/90de257fdac14d35d66a81ab8e282cad.jpg' 
     const stories =[
        {
         id:1,
@@ -35,7 +36,7 @@ const Stories = () => {
     <div className='stories'>
      
       <div className="story">
-        <img src={currentUser.img} alt="" />
+        <img src={currentUser.profilePic ? currentUser.profilePic :defaultProfile} alt="" />
         <span>{currentUser.name}</span>
         <button>+</button>
       </div>

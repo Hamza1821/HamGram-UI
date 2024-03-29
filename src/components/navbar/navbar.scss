@@ -64,10 +64,36 @@
                 object-fit: cover;
                 border-radius: 50%;
             }
+            cursor: pointer;
             
         }
 
     }
+    
+}
+.menuProfile{
+    position: fixed;
+    top:52px;
+    right: 0;
+    padding: 10px;
+    z-index: 99;
+    display: block;
+    background-color: rgb(197, 189, 189);
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap:5px;
+    .span{
+        font-size: 20px;
+        color: white;
+        cursor: pointer;
+       
+    }
+    .span:hover{
+        color: rgb(212, 119, 212);
+       }
     
 }
 
