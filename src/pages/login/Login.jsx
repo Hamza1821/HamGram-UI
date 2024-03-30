@@ -68,10 +68,16 @@ const handleClick = async (e) => {
       <div className="right">
         <h1>Login</h1>
         <form>
+<<<<<<< HEAD
           <input type="text" placeholder='Username' onChange={handleChange}  name='username'/>
           <input type="password" placeholder='Password' onChange={handleChange} name='password' />
           {err? err:''}
           <button onClick={handleClick}>login</button>
+=======
+          <input type="text" placeholder='Username' />
+          <input type="password" placeholder='Password' />
+          <button onClick={handleLogin()}>login</button>
+>>>>>>> 41f6e40243284f2bad0786c8ee0c3a7d3ff790b4
         </form>
       </div>
      </div>
